@@ -1,0 +1,15 @@
+.bg-video {
+    width: 100%;
+    z-index: -10;
+    opacity: .5;
+    overflow: hidden;
+    grid-column: 1 / -1;
+    grid-row: 4 / span 1;
+    border-top: 2px solid $color-grey;
+    
+    &__content {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}

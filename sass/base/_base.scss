@@ -1,0 +1,74 @@
+// COLOR VARIABLES
+$color-primary: #020707;
+$color-secondary: #0C8A95;
+$color-tertiary: #19ACA8;
+$color-4: #365F3C;
+
+$color-white: #F7FFF7;
+$color-white-darker: #F6F8F5;
+$color-grey: #aaa;
+
+// FONT VARIABLES
+$font-primary: 'Nunito', sans-serif;
+$font-display: 'Josefin Sans', sans-serif;
+
+//RESPONSIVE BREAKPOINTS
+$bp-large: 75em; // 1200px/16
+$bp-1k: 62.5em; // 1k
+$bp-medium: 50em; // 800px
+$bp-small: 37.5em; // 600px
+
+@media (prefers-reduced-motion: no-preference) {
+    :root {
+      scroll-behavior: smooth;
+    }
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+
+    @media only screen and (max-width: $bp-large) {
+        font-size: 50%;
+    }
+}
+
+body {
+    font-family: $font-primary;
+    color: $color-primary;
+    font-weight: 300;
+    background-color: $color-white-darker;
+
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 10rem 80vh min-content 90vh min-content ;
+    grid-template-columns: repeat(8, 1fr);
+}
+
+.aboutus-container {
+    display: grid;
+    grid-template-rows: 10rem min-content min-content;
+    grid-template-columns: repeat(8, 1fr);
+}
+
+.contact-container {
+    display: grid;
+    grid-template-rows: 10rem calc(100vh - 20rem) min-content;
+    grid-template-columns: repeat(8, 1fr);
+}
+
+.quehacemos-container {
+    display: grid;
+    grid-template-rows: 10rem minmax(calc(100vh - 20rem), min-content) min-content;
+    grid-template-columns: repeat(8, 1fr);
+}

@@ -1,0 +1,84 @@
+.nav {
+    background-color: $color-primary;
+    grid-column: 1 / -1;
+
+    display: grid;
+    justify-items: center;
+
+    &__container {
+        width: 60%;
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: space-between;
+        align-items: center;
+
+        @media only screen and (max-width: $bp-small) {
+            width: 100%;
+        }
+    }
+    
+    &__logo {
+        height: 7rem;
+        @media only screen and (max-width: $bp-small) {
+            justify-self: start;
+        }
+    }
+
+    // &-btn {
+    //     border-radius: 0;
+    //     border: none;
+    //     background-color: #fff;
+    //     height: 2px;
+    //     width: 4.5rem;
+    
+    //     &::before,
+    //     &::after {
+    //         background-color: #fff;
+    //         height: 2px;
+    //         width: 4.5rem;
+    //         content: "";
+    //         display: block;
+    //     }
+    
+    //     &::before {
+    //         transform: translateY(-1.5rem);
+    //     }
+    
+    //     &::after {
+    //         transform: translateY(1.5rem);
+    //     }
+    // }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        @media only screen and (max-width: $bp-small) {
+            flex-wrap: wrap;
+            justify-content: end;
+        }
+    }
+
+    &__wsp-btn {
+        color: $color-white;
+        display: flex;
+        align-items: center;
+        font-size: 1.5rem;
+        text-decoration: none;
+        
+        & > *:not(:last-child) {
+            margin-right: 1rem;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            width: 100%;
+            margin-right: 2rem;
+            margin-top: .5rem;
+        }
+    }
+
+    &__wspicon {
+        height: 3rem;
+        width: 3rem;
+        fill: $color-white;
+    }
+}

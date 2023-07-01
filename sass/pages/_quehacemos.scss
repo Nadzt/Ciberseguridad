@@ -1,0 +1,46 @@
+.quehacemos {
+    grid-column: 2 / -2;
+    padding: 6rem 0;
+
+    @media only screen and (max-width: $bp-small) {
+        grid-column: 1 / -1;
+    }
+
+    &__item {
+        font-size: 2rem;
+        text-transform: uppercase;
+        font-family: $font-primary;
+    }
+
+    &__contenido {
+        font-size: 1.6rem;
+
+        & h4 {
+            font-size: 2rem;
+            margin-top: 1.5rem;
+            text-decoration: underline;
+        }
+        
+        ul {
+            margin-left: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        strong {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+    }
+
+    &__image {
+        margin-top: 2rem;
+        width: 100%;
+
+    }
+}
+
+
+.accordion-button:not(.collapsed) {
+    background-color: $color-tertiary !important;
+    color: $color-white !important;
+}

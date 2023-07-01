@@ -1,0 +1,39 @@
+.heading {
+
+    &-1,
+    &-2,
+    &-3 {
+        font-family: $font-display;
+    }
+
+    &-1 {
+        grid-row: 2 / 3;
+        grid-column: 1 / -1;
+        font-size: 9rem;
+        text-transform: uppercase;
+        background-color: $color-white;
+        display: inline-block;
+        justify-self: start;
+        padding: 5rem 11rem;
+        mix-blend-mode: screen;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 4rem;
+            padding: 2rem 2rem;
+        }
+    }
+
+    &-2 {
+        font-size: 4.5rem;
+        text-transform: uppercase;        
+        background-image: linear-gradient(to right, $color-tertiary, $color-4);
+        display: inline-block;
+        background-clip: text;
+        color: transparent;
+    }
+
+    &-3 {
+    }
+}

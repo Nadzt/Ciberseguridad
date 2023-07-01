@@ -1,0 +1,47 @@
+.whatis {
+    grid-column: 2 / -2;    
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-column-gap: 6rem;
+    margin: 8vw 0;
+
+    &__text {
+        font-size: 1.6rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        padding: 1rem;
+        grid-column: 1 / -1;
+    }
+
+    &__separador {
+        width: 100px;
+        border: 2px solid $color-secondary;
+        border-radius: 1000px;
+        justify-self: center;
+        margin: 3rem 0;
+    }
+
+    &__image {
+        height: 500px;
+        width: 400px;
+        object-fit: cover;
+        object-position: left;
+        border-radius: 4px;
+
+        @media only screen and (max-width: $bp-small) {
+            display: none;
+        }
+
+    }
+
+    &__content {
+        display: grid;
+        align-content: center;
+        text-align: center;
+
+        @media only screen and (max-width: $bp-small) {
+            grid-column: 1/-1;
+        }
+    }
+}
